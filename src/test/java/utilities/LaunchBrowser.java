@@ -12,7 +12,11 @@ public class LaunchBrowser {
     static WebDriver driver;
 
     public static WebDriver startChromeDriver(String url){
+
+        //this is the code for locating chromedriver when using maven. make sure to include the webdrivermanager dependency
         ChromeDriverManager.getInstance().setup();
+
+        //System.setProperty("Webdriver.chrome.driver", "home/clifftonkariuki/workspace/Selenium_Jars/chromedriver");
 
         driver= new ChromeDriver();
         driver.manage().window().maximize();
