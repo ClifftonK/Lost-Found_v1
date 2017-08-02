@@ -1,5 +1,6 @@
 package utilities;
 
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -11,7 +12,7 @@ public class LaunchBrowser {
     static WebDriver driver;
 
     public static WebDriver startChromeDriver(String url){
-        System.setProperty("Webdriver.chrome.driver", "../Selenium_Jars/chromedriver");
+        ChromeDriverManager.getInstance().setup();
 
         driver= new ChromeDriver();
         driver.manage().window().maximize();
