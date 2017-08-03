@@ -16,10 +16,12 @@ public class LoginSmokeTest {
     WebDriver driver;
 
     static String Url= "http://127.0.0.1/Lost&Found/index.html";
+    String title= driver.getTitle();
 
     @Test(priority = 1)
     public void positiveTestClerkLogin() throws InterruptedException {
         driver= LaunchBrowser.startChromeDriver(Url);
+        System.out.println("Starting the browser now...\n" + "Website" + title +"loading");
 
         //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Thread.sleep(3000);
@@ -35,8 +37,8 @@ public class LoginSmokeTest {
 
     @Test(priority = 2)
     public void negativeTestClerkLogin() throws InterruptedException {
-
         driver= LaunchBrowser.startChromeDriver(Url);
+        System.out.println("Starting the browser now...\n" + "Website" + title +"loading");
 
         //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Thread.sleep(3000);
@@ -54,6 +56,7 @@ public class LoginSmokeTest {
     @Test(priority = 3)
     public void positiveTestAdminLogin() throws InterruptedException {
         driver= LaunchBrowser.startChromeDriver(Url);
+        System.out.println("Starting the browser now...\n" + "Website" + title +"loading");
 
         //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Thread.sleep(3000);
@@ -70,6 +73,7 @@ public class LoginSmokeTest {
     @Test(priority = 4)
     public void negativeTestAdminLogin() throws InterruptedException {
         driver= LaunchBrowser.startChromeDriver(Url);
+        System.out.println("Starting the browser now...\n" + "Website" + title +"loading");
 
         //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Thread.sleep(3000);
