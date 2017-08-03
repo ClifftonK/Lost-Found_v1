@@ -15,37 +15,72 @@ public class LoginSmokeTest {
 
     WebDriver driver;
 
-    @Test(priority = 1)
-    public void positiveTestClerkLogin(){
-        driver= LaunchBrowser.startChromeDriver("http://127.0.0.1/Lost&Found/index.html");
+    static String Url= "http://127.0.0.1/Lost&Found/index.html";
 
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    @Test(priority = 1)
+    public void positiveTestClerkLogin() throws InterruptedException {
+        driver= LaunchBrowser.startChromeDriver(Url);
+
+        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Thread.sleep(3000);
 
         LoginElements clerk_login= PageFactory.initElements(driver, LoginElements.class);
         clerk_login.clerkLogin("clif.kariuki@gmail.com", "xx");
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Thread.sleep(3000);
 
         driver.quit();
     }
 
-    public void negativeTestClerkLogin(){
+    @Test(priority = 2)
+    public void negativeTestClerkLogin() throws InterruptedException {
+
+        driver= LaunchBrowser.startChromeDriver(Url);
+
+        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Thread.sleep(3000);
+
+        LoginElements clerk_login= PageFactory.initElements(driver, LoginElements.class);
+        clerk_login.clerkLogin("cliffton.kariuki@gmail.com", "wrong pass");
+
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Thread.sleep(3000);
+
+        driver.quit();
 
     }
 
     @Test(priority = 3)
-    public void positiveTestAdminLogin(){
-        driver= LaunchBrowser.startChromeDriver("http://127.0.0.1/Lost&Found/index.html");
+    public void positiveTestAdminLogin() throws InterruptedException {
+        driver= LaunchBrowser.startChromeDriver(Url);
 
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Thread.sleep(3000);
 
         LoginElements admin_login= PageFactory.initElements(driver, LoginElements.class);
         admin_login.adminLogin("1", "admin@huduma.com", "admin");
 
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Thread.sleep(3000);
+
+        driver.quit();
     }
 
-    public void negativeTestAdminLogin(){
+    @Test(priority = 4)
+    public void negativeTestAdminLogin() throws InterruptedException {
+        driver= LaunchBrowser.startChromeDriver(Url);
+
+        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Thread.sleep(3000);
+
+        LoginElements admin_login= PageFactory.initElements(driver, LoginElements.class);
+        admin_login.adminLogin("1", "admin@huduma.coke", "incorrectpass");
+
+        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Thread.sleep(3000);
+
+        driver.quit();
 
     }
 }
