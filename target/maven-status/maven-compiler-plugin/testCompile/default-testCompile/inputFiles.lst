@@ -1,4 +1,7 @@
 /home/clifftonkariuki/workspace/LostnfoundAutomation/src/test/java/pages/LoginElements.java
 /home/clifftonkariuki/workspace/LostnfoundAutomation/src/test/java/utilities/LaunchBrowser.java
+/home/clifftonkariuki/workspace/LostnfoundAutomation/src/test/java/utilities/CaptureScreenshot.java
+/home/clifftonkariuki/workspace/LostnfoundAutomation/src/test/java/pages/MenuBarToggle.java
 /home/clifftonkariuki/workspace/LostnfoundAutomation/src/test/java/generic/LoginGeneral.java
 /home/clifftonkariuki/workspace/LostnfoundAutomation/src/test/java/tests/LoginSmokeTest.java
+/home/clifftonkariuki/workspace/LostnfoundAutomation/src/test/java/tests/ToogleMenuTest.java

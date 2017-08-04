@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.LoginSmokeTest" time="40.52" tests="4" errors="0" skipped="0" failures="0">
+<testsuite name="tests.LoginSmokeTest" time="37.965" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -60,8 +60,8 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="positiveTestClerkLogin" classname="tests.LoginSmokeTest" time="12.183"/>
-  <testcase name="negativeTestClerkLogin" classname="tests.LoginSmokeTest" time="7.674"/>
-  <testcase name="positiveTestAdminLogin" classname="tests.LoginSmokeTest" time="12.743"/>
-  <testcase name="negativeTestAdminLogin" classname="tests.LoginSmokeTest" time="7.92"/>
+  <testcase name="positiveTestClerkLogin" classname="tests.LoginSmokeTest" time="10.331"/>
+  <testcase name="negativeTestClerkLogin" classname="tests.LoginSmokeTest" time="8.754"/>
+  <testcase name="positiveTestAdminLogin" classname="tests.LoginSmokeTest" time="8.693"/>
+  <testcase name="negativeTestAdminLogin" classname="tests.LoginSmokeTest" time="10.187"/>
 </testsuite>

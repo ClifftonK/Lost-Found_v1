@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="40539" started-at="2017-08-03T13:19:04Z" finished-at="2017-08-03T13:19:45Z">
+  <suite name="Surefire suite" duration-ms="37984" started-at="2017-08-03T19:50:48Z" finished-at="2017-08-03T19:51:26Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="40539" started-at="2017-08-03T13:19:04Z" finished-at="2017-08-03T13:19:45Z">
+    <test name="Surefire test" duration-ms="37984" started-at="2017-08-03T19:50:48Z" finished-at="2017-08-03T19:51:26Z">
       <class name="tests.LoginSmokeTest">
-        <test-method status="PASS" signature="positiveTestClerkLogin()[pri:1, instance:tests.LoginSmokeTest@5b464ce8]" name="positiveTestClerkLogin" duration-ms="12184" started-at="2017-08-03T16:19:04Z" finished-at="2017-08-03T16:19:16Z">
+        <test-method status="PASS" signature="positiveTestClerkLogin()[pri:1, instance:tests.LoginSmokeTest@5b464ce8]" name="positiveTestClerkLogin" duration-ms="10331" started-at="2017-08-03T22:50:48Z" finished-at="2017-08-03T22:50:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- positiveTestClerkLogin -->
-        <test-method status="PASS" signature="negativeTestClerkLogin()[pri:2, instance:tests.LoginSmokeTest@5b464ce8]" name="negativeTestClerkLogin" duration-ms="7673" started-at="2017-08-03T16:19:16Z" finished-at="2017-08-03T16:19:24Z">
+        <test-method status="PASS" signature="negativeTestClerkLogin()[pri:2, instance:tests.LoginSmokeTest@5b464ce8]" name="negativeTestClerkLogin" duration-ms="8758" started-at="2017-08-03T22:50:59Z" finished-at="2017-08-03T22:51:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeTestClerkLogin -->
-        <test-method status="PASS" signature="positiveTestAdminLogin()[pri:3, instance:tests.LoginSmokeTest@5b464ce8]" name="positiveTestAdminLogin" duration-ms="12744" started-at="2017-08-03T16:19:24Z" finished-at="2017-08-03T16:19:37Z">
+        <test-method status="PASS" signature="positiveTestAdminLogin()[pri:3, instance:tests.LoginSmokeTest@5b464ce8]" name="positiveTestAdminLogin" duration-ms="8694" started-at="2017-08-03T22:51:07Z" finished-at="2017-08-03T22:51:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- positiveTestAdminLogin -->
-        <test-method status="PASS" signature="negativeTestAdminLogin()[pri:4, instance:tests.LoginSmokeTest@5b464ce8]" name="negativeTestAdminLogin" duration-ms="7920" started-at="2017-08-03T16:19:37Z" finished-at="2017-08-03T16:19:45Z">
+        <test-method status="PASS" signature="negativeTestAdminLogin()[pri:4, instance:tests.LoginSmokeTest@5b464ce8]" name="negativeTestAdminLogin" duration-ms="10186" started-at="2017-08-03T22:51:16Z" finished-at="2017-08-03T22:51:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeTestAdminLogin -->

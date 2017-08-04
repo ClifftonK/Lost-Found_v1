@@ -12,9 +12,14 @@ public class MenuBarToggle {
 
     public MenuBarToggle(WebDriver ldriver){this.driver= ldriver;}
 
-    public void clickMenuItems(){
+    public void clickNidCardLink(){
 
         driver.findElement(By.xpath("//a[contains(@href, 'nid.php')]")).click(); //this is ID Card xpath on home.php
+
+    }
+
+    public void clickNhifLink(){
+
         driver.findElement(By.xpath("//a[contains(@href, 'nhif.php')]")).click(); //this is NHIF Card xpath on nid.php
         driver.findElement(By.xpath("//a[contains(@href, 'nssf.php')]")).click(); //this is NSSF Card xpath on nhif.php
         driver.findElement(By.xpath("//a[contains(@href, 'dl.php')]")).click(); //this is Driving License xpath on nssf.php

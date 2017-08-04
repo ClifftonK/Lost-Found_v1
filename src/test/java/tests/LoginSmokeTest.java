@@ -2,12 +2,11 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import pages.LoginElements;
 import utilities.CaptureScreenshot;
 import utilities.LaunchBrowser;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by clifftonkariuki on 7/30/17.
@@ -18,6 +17,12 @@ public class LoginSmokeTest {
 
     static String Url= "http://127.0.0.1/Lost&Found/index.html";
     //String title= driver.getTitle();
+
+    @AfterTest
+    public void teardown(){
+        driver.manage().deleteAllCookies();
+        driver.quit();
+    }
 
     @Test(priority = 1)
     public void positiveTestClerkLogin() throws InterruptedException {
@@ -37,7 +42,7 @@ public class LoginSmokeTest {
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Thread.sleep(2000);
 
-        driver.quit();
+        teardown();
     }
 
     @Test(priority = 2)
@@ -58,7 +63,7 @@ public class LoginSmokeTest {
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Thread.sleep(2000);
 
-        driver.quit();
+        teardown();
 
     }
 
@@ -80,7 +85,7 @@ public class LoginSmokeTest {
         //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Thread.sleep(2000);
 
-        driver.quit();
+        teardown();
     }
 
     @Test(priority = 4)
@@ -101,7 +106,7 @@ public class LoginSmokeTest {
         //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Thread.sleep(2000);
 
-        driver.quit();
+        teardown();
 
     }
 }
