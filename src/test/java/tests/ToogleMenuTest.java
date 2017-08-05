@@ -3,6 +3,8 @@ package tests;
 import generic.LoginGeneral;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import pages.MenuBarToggle;
 import utilities.CaptureScreenshot;
@@ -12,24 +14,45 @@ import utilities.CaptureScreenshot;
  */
 public class ToogleMenuTest {
     WebDriver driver;
+    String nid_title= "LFDR-ID cards";
 
-    @Test
-    public void testToggleMenu() throws InterruptedException {
+   @AfterTest
+    public void afterTest(){
+        driver.manage().deleteAllCookies();
+        driver.quit();
+    }
+
+    @Test(priority = 1)
+    public void testClickNhifButton() throws InterruptedException {
         //call login action from the generic class
+        LoginGeneral login_action= new LoginGeneral();
+        login_action.callClerkLoginAtion();
+        System.out.println("\nSuccessful Clerk Login \n");
+
+        Thread.sleep(3000);
+
+        System.out.println("about to click the ID Cards link\n");
+        MenuBarToggle clicknid= PageFactory.initElements(driver, MenuBarToggle.class);
+        clicknid.clickNidCardLink();
+
+        //Assert.assertTrue(driver.getTitle(), is(nid_title));
+        afterTest();
+    }
+
+    @Test(priority = 2)
+    public void testClickNssfButton() throws InterruptedException {
         LoginGeneral login_action= new LoginGeneral();
         login_action.callClerkLoginAtion();
         System.out.println("\nSuccessful Clerk Login \n");
 
         Thread.sleep(5000);
 
-        System.out.println("about to click the ID Cards link\n");
-        MenuBarToggle toggle_menu= PageFactory.initElements(driver, MenuBarToggle.class);
-        toggle_menu.clickNidCardLink();
+        MenuBarToggle clicknhif= PageFactory.initElements(driver, MenuBarToggle.class);
+        clicknhif.clickNidCardLink();
+        clicknhif.clickNhifLink();
 
-        CaptureScreenshot capture= new CaptureScreenshot();
-        capture.captureScreenshot(driver);
-        System.out.println("\nCaptured successful navigation to the NID Page screenshot\n");
+        afterTest();
 
-        driver.quit();
     }
+
 }

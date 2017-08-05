@@ -1,4 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: tests.LoginSmokeTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 38.256 sec - in tests.LoginSmokeTest
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 51.358 sec <<< FAILURE! - in tests.LoginSmokeTest
+teardown(tests.LoginSmokeTest)  Time elapsed: 8.836 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'cliffton', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-83-generic', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:776)
+	at tests.LoginSmokeTest.teardown(LoginSmokeTest.java:23)
+
