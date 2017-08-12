@@ -22,12 +22,9 @@ public class CreateClerkElements {
         driver.findElement(By.name("cidno")).sendKeys(clerkidnumber);
         driver.findElement(By.name("cemail")).sendKeys(clerkemail);
         driver.findElement(By.name("cpassword")).sendKeys(clerkpassword);
-        //driver.findElement(By.name("")).sendKeys(clerkhuduma);
-
-        WebElement set_huduma= driver.findElement(By.name("huduma"));
-        Select huduma= new Select(set_huduma);
-        huduma.selectByVisibleText("Huduma Eastleigh");
-
+        new Select(driver.findElement(By.name("huduma"))).selectByVisibleText("Huduma Eastleigh");
         driver.findElement(By.name("create_clerk")).click();
     }
+
+    public void editClerk(){}
 }

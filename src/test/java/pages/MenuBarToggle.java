@@ -12,16 +12,14 @@ public class MenuBarToggle {
 
     public MenuBarToggle(WebDriver ldriver){this.driver= ldriver;}
 
-    public static WebDriver clickNidCardLink(){
+    public void clickNidCardLink(){
         driver.findElement(By.xpath("//a[contains(@href, 'nid.php')]")).click(); //this is ID Card xpath on home.php
 
-        return driver;
     }
 
-    public static WebDriver clickNhifLink(){
+    public void clickNhifLink(){
         driver.findElement(By.xpath("//a[contains(@href, 'nhif.php')]")).click(); //this is NHIF Card xpath on nid.php
 
-        return driver;
     }
 
     public void clickNssfLink(){

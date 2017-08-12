@@ -20,8 +20,14 @@ public class LoginSmokeTest {
 
     @AfterTest
     public void teardown(){
-        driver.manage().deleteAllCookies();
+        //driver.manage().deleteAllCookies();
         driver.quit();
+    }
+
+    public  void takeScreenshot(){
+        CaptureScreenshot capture= new CaptureScreenshot();
+        capture.captureScreenshot(driver);
+        System.out.println("\nCaptured Successful clerk login screenshot\n");
     }
 
     @Test(priority = 1)
@@ -35,13 +41,8 @@ public class LoginSmokeTest {
         LoginElements clerk_login= PageFactory.initElements(driver, LoginElements.class);
         clerk_login.clerkLogin("clif.kariuki@gmail.com", "xx");
 
-        CaptureScreenshot capture= new CaptureScreenshot();
-        capture.captureScreenshot(driver);
-        System.out.println("\nCaptured Successful clerk login screenshot\n");
-
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Thread.sleep(2000);
-
+        takeScreenshot();
         teardown();
     }
 
@@ -56,15 +57,9 @@ public class LoginSmokeTest {
         LoginElements clerk_login= PageFactory.initElements(driver, LoginElements.class);
         clerk_login.clerkLogin("cliffton.kariuki@gmail.com", "wrong pass");
 
-        CaptureScreenshot capture= new CaptureScreenshot();
-        capture.captureScreenshot(driver);
-        System.out.println("\nCaptured USERNAME or PASSWORD could not Match. login screenshot\n");
-
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Thread.sleep(2000);
-
+        takeScreenshot();
         teardown();
-
     }
 
     @Test(priority = 3)
@@ -78,13 +73,8 @@ public class LoginSmokeTest {
         LoginElements admin_login= PageFactory.initElements(driver, LoginElements.class);
         admin_login.adminLogin("1", "admin@huduma.com", "admin");
 
-        CaptureScreenshot capture= new CaptureScreenshot();
-        capture.captureScreenshot(driver);
-        System.out.println("\nCaptured Successful admin login screenshot\n");
-
-        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Thread.sleep(2000);
-
+        takeScreenshot();
         teardown();
     }
 
@@ -99,13 +89,8 @@ public class LoginSmokeTest {
         LoginElements admin_login= PageFactory.initElements(driver, LoginElements.class);
         admin_login.adminLogin("1", "admin@huduma.coke", "incorrectpass");
 
-        CaptureScreenshot capture= new CaptureScreenshot();
-        capture.captureScreenshot(driver);
-        System.out.println("\nCaptured USERNAME or PASSWORD could not Match. login screenshot\n");
-
-        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Thread.sleep(2000);
-
+        takeScreenshot();
         teardown();
 
     }
