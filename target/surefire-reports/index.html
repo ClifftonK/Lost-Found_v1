@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Surefire_suite">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-failed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Surefire_suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="tests.ToogleMenuTest" hash-for-method="testGoBackHome">testGoBackHome</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +116,22 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="tests.CreateClerkTest" hash-for-method="createClerkNegativeTest">createClerkNegativeTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="tests.ToogleMenuTest" hash-for-method="testClickDlButton">testClickDlButton</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="tests.CreateClerkTest" hash-for-method="createClerkTest">createClerkTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="tests.ToogleMenuTest" hash-for-method="testClickNhifButton">testClickNhifButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="tests.ToogleMenuTest" hash-for-method="testClickNssfButton">testClickNssfButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="tests.ToogleMenuTest" hash-for-method="testClickNssfLink">testClickNssfLink</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -122,24 +146,75 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-passed">
+          <div class="suite-Surefire_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.CreateClerkTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">tests.ToogleMenuTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createClerkNegativeTest">
-                  </a> <!-- createClerkNegativeTest -->
-                  <span class="method-name">createClerkNegativeTest</span>
+                  <a name="testGoBackHome">
+                  </a> <!-- testGoBackHome -->
+                  <span class="method-name">testGoBackHome</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Go Back Home&quot;}
+  (Session info: chrome=60.0.3112.78)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Linux 4.4.0-83-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 43 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;cliffton&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.4.0-83-generic&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=/tmp/.org.chromium.Chromium.IzEwEk}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.78, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: bfdd164cb3255d25130e8b19e7030cdb
+*** Element info: {Using=link text, value=Go Back Home}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:461)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pages.MenuBarToggle.goBackHomeFromDl(MenuBarToggle.java:36)
+	at tests.ToogleMenuTest.testGoBackHome(ToogleMenuTest.java:107)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.ToogleMenuTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testClickDlButton">
+                  </a> <!-- testClickDlButton -->
+                  <span class="method-name">testClickDlButton</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="createClerkTest">
-                  </a> <!-- createClerkTest -->
-                  <span class="method-name">createClerkTest</span>
+                  <a name="testClickNhifButton">
+                  </a> <!-- testClickNhifButton -->
+                  <span class="method-name">testClickNhifButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testClickNssfButton">
+                  </a> <!-- testClickNssfButton -->
+                  <span class="method-name">testClickNssfButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testClickNssfLink">
+                  </a> <!-- testClickNssfLink -->
+                  <span class="method-name">testClickNssfLink</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -155,9 +230,19 @@
 &lt;suite thread-count=&quot;1&quot; verbose=&quot;0&quot; name=&quot;Surefire suite&quot;&gt;
   &lt;test name=&quot;Surefire test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.CreateClerkTest&quot;/&gt;
+      &lt;class name=&quot;tests.ToogleMenuTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
+  &lt;test name=&quot;Surefire test(failed)&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tests.ToogleMenuTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;afterTest&quot;/&gt;
+          &lt;include name=&quot;testGoBackHome&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- tests.ToogleMenuTest --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Surefire test(failed) --&gt;
 &lt;/suite&gt; &lt;!-- Surefire suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -170,6 +255,9 @@
             <ul>
               <li>
                 <span class="test-name">Surefire test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Surefire test(failed) (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -195,20 +283,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createClerkTest')
-data.setCell(0, 2, 'tests.CreateClerkTest')
-data.setCell(0, 3, 11582);
+data.setCell(0, 1, 'testClickNhifButton')
+data.setCell(0, 2, 'tests.ToogleMenuTest')
+data.setCell(0, 3, 10785);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createClerkNegativeTest')
-data.setCell(1, 2, 'tests.CreateClerkTest')
-data.setCell(1, 3, 11106);
+data.setCell(1, 1, 'testClickDlButton')
+data.setCell(1, 2, 'tests.ToogleMenuTest')
+data.setCell(1, 3, 10356);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testClickNssfButton')
+data.setCell(2, 2, 'tests.ToogleMenuTest')
+data.setCell(2, 3, 9819);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testClickNssfLink')
+data.setCell(3, 2, 'tests.ToogleMenuTest')
+data.setCell(3, 3, 9745);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testGoBackHome')
+data.setCell(4, 2, 'tests.ToogleMenuTest')
+data.setCell(4, 3, 7345);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <span class="suite-total-time">Total running time: 48 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -234,18 +334,32 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.CreateClerkTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.ToogleMenuTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">createClerkTest</span>
+                <span class="method-name">testClickNhifButton</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">createClerkNegativeTest</span>
-                <span class="method-start">11583 ms</span>
+                <span class="method-name">testClickNssfButton</span>
+                <span class="method-start">10786 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testClickNssfLink</span>
+                <span class="method-start">20605 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testClickDlButton</span>
+                <span class="method-start">30351 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGoBackHome</span>
+                <span class="method-start">40707 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">22690 ms</span>
+                <span class="method-name">afterTest</span>
+                <span class="method-start">48058 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
