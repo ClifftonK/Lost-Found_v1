@@ -27,7 +27,7 @@ public class ToogleMenuTest {
     public  void takeScreenshot(){
         CaptureScreenshot capture= new CaptureScreenshot();
         capture.captureScreenshot(driver);
-        System.out.println("\nCaptured Successful clerk login screenshot\n");
+        System.out.println("Captured Successful clerk login screenshot\n");
     }
 
     @Test(priority = 1)
@@ -40,7 +40,7 @@ public class ToogleMenuTest {
         clicknid.clickNidCardLink();
         takeScreenshot();
 
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         afterTest();
     }
 
@@ -55,9 +55,60 @@ public class ToogleMenuTest {
         clicknhif.clickNhifLink();
         takeScreenshot();
 
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         afterTest();
 
+    }
+
+    @Test(priority = 3)
+    public void testClickNssfLink () throws InterruptedException {
+        driver= LoginGeneral.callClerkLoginAction();
+        Thread.sleep(2000);
+
+        System.out.println("about to click the NHIF Card link\n");
+        MenuBarToggle clicknssf= PageFactory.initElements(driver, MenuBarToggle.class);
+        clicknssf.clickNidCardLink();
+        clicknssf.clickNhifLink();
+        clicknssf.clickNssfLink();
+        takeScreenshot();
+
+        Thread.sleep(2000);
+        afterTest();
+    }
+
+    @Test(priority = 4)
+    public void testClickDlButton() throws InterruptedException{
+        driver= LoginGeneral.callClerkLoginAction();
+        Thread.sleep(2000);
+
+        System.out.println("about to click the NHIF Card link\n");
+        MenuBarToggle clickdl= PageFactory.initElements(driver, MenuBarToggle.class);
+        clickdl.clickNidCardLink();
+        clickdl.clickNhifLink();
+        clickdl.clickNssfLink();
+        clickdl.clickDlLink();
+        takeScreenshot();
+
+        Thread.sleep(2000);
+        afterTest();
+    }
+
+    @Test(priority = 5)
+    public void testGoBackHome() throws InterruptedException{
+        driver= LoginGeneral.callClerkLoginAction();
+        Thread.sleep(2000);
+
+        System.out.println("about to click the NHIF Card link\n");
+        MenuBarToggle gobackhome= PageFactory.initElements(driver, MenuBarToggle.class);
+        gobackhome.clickNidCardLink();
+        gobackhome.clickNhifLink();
+        gobackhome.clickNssfLink();
+        gobackhome.clickDlLink();
+        gobackhome.goBackHomeFromDl();
+        takeScreenshot();
+
+        Thread.sleep(2000);
+        afterTest();
     }
 
 }
