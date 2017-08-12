@@ -20,12 +20,13 @@ public class CreateClerkTest {
 
     WebDriver driver;
 
-    static String clerkname= "Automation Kariuki";
-    static String clerkid= "109";
-    static String clerkidno= "30232409";
+    static String clerkname= "Cliffton Kariuki Automation";
+    static String clerkid= "111";
+    static String clerkidno= "90897867";
     static String clerkemail= clerkname+ "@huduma.com";
     static String clerkpassword= "changeme";
-   // static String Url= "http://127.0.0.1/Lost&Found/index.html";
+
+    static String clerk_already_exists_id= "100";
 
     @AfterTest
     public void tearDown(){
@@ -33,10 +34,10 @@ public class CreateClerkTest {
         driver.quit();
     }
 
-    public  void takeScreenshot(){
+    public void takeScreenshot(){
         CaptureScreenshot capture= new CaptureScreenshot();
         capture.captureScreenshot(driver);
-        System.out.println("\nCaptured Successful clerk login screenshot\n");
+        System.out.println("Captured Successful clerk login screenshot\n");
     }
 
     @Test(priority = 1)
@@ -47,10 +48,9 @@ public class CreateClerkTest {
 
         CreateClerkElements create_clerk= PageFactory.initElements(driver, CreateClerkElements.class);
         create_clerk.createClerk(clerkname, clerkid, clerkidno, clerkemail, clerkpassword);
+        takeScreenshot();
 
         Thread.sleep(5000);
-
-        takeScreenshot();
         tearDown();
     }
 
@@ -60,7 +60,11 @@ public class CreateClerkTest {
 
         Thread.sleep(3000);
 
+        CreateClerkElements create_clerk= PageFactory.initElements(driver, CreateClerkElements.class);
+        create_clerk.createClerk(clerkname, clerk_already_exists_id, clerkidno, clerkemail, clerkpassword);
         takeScreenshot();
+
+        Thread.sleep(5000);
         tearDown();
     }
 }

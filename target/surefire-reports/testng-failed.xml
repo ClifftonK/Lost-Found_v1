@@ -3,7 +3,7 @@
 <suite thread-count="1" verbose="0" name="Failed suite [Surefire suite]">
   <test name="Surefire test">
     <classes>
-      <class name="tests.LoginSmokeTest"/>
+      <class name="tests.CreateClerkTest"/>
     </classes>
   </test> <!-- Surefire test -->
 </suite> <!-- Failed suite [Surefire suite] -->

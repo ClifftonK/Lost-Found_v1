@@ -38,9 +38,9 @@ public class ToogleMenuTest {
         System.out.println("about to click the ID Cards link\n");
         MenuBarToggle clicknid= PageFactory.initElements(driver, MenuBarToggle.class);
         clicknid.clickNidCardLink();
+        takeScreenshot();
 
         Thread.sleep(3000);
-        takeScreenshot();
         afterTest();
     }
 
@@ -53,9 +53,9 @@ public class ToogleMenuTest {
         MenuBarToggle clicknhif= PageFactory.initElements(driver, MenuBarToggle.class);
         clicknhif.clickNidCardLink();
         clicknhif.clickNhifLink();
+        takeScreenshot();
 
         Thread.sleep(3000);
-        takeScreenshot();
         afterTest();
 
     }

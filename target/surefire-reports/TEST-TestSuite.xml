@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.LoginSmokeTest" time="34.856" tests="4" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="46.795" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -14,7 +14,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
-    <property name="test" value="LoginSmokeTest"/>
+    <property name="test" value="LoginSmokeTest,ToggleMenuTest,CreateClerkTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/home/clifftonkariuki/workspace/LostnfoundAutomation"/>
     <property name="java.runtime.version" value="1.8.0_131-8u131-b11-2ubuntu1.16.04.2-b11"/>
@@ -42,7 +42,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dtest=LoginSmokeTest"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dtest=LoginSmokeTest,ToggleMenuTest,CreateClerkTest"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -60,8 +60,9 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="positiveTestClerkLogin" classname="tests.LoginSmokeTest" time="9.797"/>
-  <testcase name="negativeTestClerkLogin" classname="tests.LoginSmokeTest" time="8.101"/>
-  <testcase name="positiveTestAdminLogin" classname="tests.LoginSmokeTest" time="8.828"/>
-  <testcase name="negativeTestAdminLogin" classname="tests.LoginSmokeTest" time="8.13"/>
+  <testcase name="createClerkTest" classname="tests.CreateClerkTest" time="13.289"/>
+  <testcase name="positiveTestClerkLogin" classname="tests.LoginSmokeTest" time="8.867"/>
+  <testcase name="negativeTestClerkLogin" classname="tests.LoginSmokeTest" time="8.1"/>
+  <testcase name="positiveTestAdminLogin" classname="tests.LoginSmokeTest" time="8.486"/>
+  <testcase name="negativeTestAdminLogin" classname="tests.LoginSmokeTest" time="8.053"/>
 </testsuite>
