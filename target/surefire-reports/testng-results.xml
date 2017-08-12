@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="51049" started-at="2017-08-04T09:47:18Z" finished-at="2017-08-04T09:48:09Z">
+  <suite name="Surefire suite" duration-ms="23752" started-at="2017-08-05T17:57:50Z" finished-at="2017-08-05T17:58:13Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="51049" started-at="2017-08-04T09:47:18Z" finished-at="2017-08-04T09:48:09Z">
+    <test name="Surefire test" duration-ms="23752" started-at="2017-08-05T17:57:50Z" finished-at="2017-08-05T17:58:13Z">
       <class name="tests.LoginSmokeTest">
-        <test-method status="PASS" signature="positiveTestClerkLogin()[pri:1, instance:tests.LoginSmokeTest@6fadae5d]" name="positiveTestClerkLogin" duration-ms="18349" started-at="2017-08-04T12:47:18Z" finished-at="2017-08-04T12:47:36Z">
+        <test-method status="PASS" signature="positiveTestClerkLogin()[pri:1, instance:tests.LoginSmokeTest@6fadae5d]" name="positiveTestClerkLogin" duration-ms="6399" started-at="2017-08-05T20:57:50Z" finished-at="2017-08-05T20:57:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- positiveTestClerkLogin -->
-        <test-method status="PASS" signature="negativeTestClerkLogin()[pri:2, instance:tests.LoginSmokeTest@6fadae5d]" name="negativeTestClerkLogin" duration-ms="12074" started-at="2017-08-04T12:47:36Z" finished-at="2017-08-04T12:47:48Z">
+        <test-method status="PASS" signature="negativeTestClerkLogin()[pri:2, instance:tests.LoginSmokeTest@6fadae5d]" name="negativeTestClerkLogin" duration-ms="5725" started-at="2017-08-05T20:57:56Z" finished-at="2017-08-05T20:58:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeTestClerkLogin -->
-        <test-method status="PASS" signature="positiveTestAdminLogin()[pri:3, instance:tests.LoginSmokeTest@6fadae5d]" name="positiveTestAdminLogin" duration-ms="11780" started-at="2017-08-04T12:47:48Z" finished-at="2017-08-04T12:48:00Z">
+        <test-method status="PASS" signature="positiveTestAdminLogin()[pri:3, instance:tests.LoginSmokeTest@6fadae5d]" name="positiveTestAdminLogin" duration-ms="5754" started-at="2017-08-05T20:58:02Z" finished-at="2017-08-05T20:58:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- positiveTestAdminLogin -->
-        <test-method status="PASS" signature="negativeTestAdminLogin()[pri:4, instance:tests.LoginSmokeTest@6fadae5d]" name="negativeTestAdminLogin" duration-ms="8820" started-at="2017-08-04T12:48:00Z" finished-at="2017-08-04T12:48:09Z">
+        <test-method status="PASS" signature="negativeTestAdminLogin()[pri:4, instance:tests.LoginSmokeTest@6fadae5d]" name="negativeTestAdminLogin" duration-ms="5851" started-at="2017-08-05T20:58:07Z" finished-at="2017-08-05T20:58:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeTestAdminLogin -->
-        <test-method status="FAIL" signature="teardown()[pri:0, instance:tests.LoginSmokeTest@6fadae5d]" name="teardown" is-config="true" duration-ms="0" started-at="2017-08-04T12:48:09Z" finished-at="2017-08-04T12:48:09Z">
+        <test-method status="FAIL" signature="teardown()[pri:0, instance:tests.LoginSmokeTest@6fadae5d]" name="teardown" is-config="true" duration-ms="0" started-at="2017-08-05T20:58:13Z" finished-at="2017-08-05T20:58:13Z">
           <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
               <![CDATA[Session ID is null. Using WebDriver after calling quit()?

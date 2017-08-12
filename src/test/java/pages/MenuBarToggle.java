@@ -8,18 +8,20 @@ import org.openqa.selenium.WebDriver;
  */
 public class MenuBarToggle {
 
-    WebDriver driver;
+   static WebDriver driver;
 
     public MenuBarToggle(WebDriver ldriver){this.driver= ldriver;}
 
-    public void clickNidCardLink(){
+    public static WebDriver clickNidCardLink(){
         driver.findElement(By.xpath("//a[contains(@href, 'nid.php')]")).click(); //this is ID Card xpath on home.php
 
+        return driver;
     }
 
-    public void clickNhifLink(){
+    public static WebDriver clickNhifLink(){
         driver.findElement(By.xpath("//a[contains(@href, 'nhif.php')]")).click(); //this is NHIF Card xpath on nid.php
 
+        return driver;
     }
 
     public void clickNssfLink(){

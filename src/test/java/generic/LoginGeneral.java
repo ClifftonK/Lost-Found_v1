@@ -10,17 +10,19 @@ import utilities.LaunchBrowser;
  */
 public class LoginGeneral {
 
-    WebDriver driver;
+    static WebDriver driver;
 
     static String Url= "http://127.0.0.1/Lost&Found/index.html";
     //String title= driver.getTitle();
 
-    public void callClerkLoginAtion(){
+    public static WebDriver callClerkLoginAction(){
         driver= LaunchBrowser.startChromeDriver(Url);
         System.out.println("Starting the browser now...\n");
 
         LoginElements clerk_login= PageFactory.initElements(driver, LoginElements.class);
         clerk_login.clerkLogin("clif.kariuki@gmail.com", "xx");
+
+        return driver;
     }
 
     public void callAdminLoginAction(){

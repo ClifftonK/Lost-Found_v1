@@ -20,9 +20,9 @@ public class CreateClerkTest {
 
     WebDriver driver;
 
-    static String clerkname= "Grace Mwangi";
-    static String clerkid= "1890";
-    static String clerkidno= "1234543";
+    static String clerkname= "Automation Mwangi";
+    static String clerkid= "1891";
+    static String clerkidno= "123454390";
     static String clerkemail= "grace.mwangi@huduma.com";
     static String clerkpassword= "changeme";
     static String Url= "http://127.0.0.1/Lost&Found/index.html";
