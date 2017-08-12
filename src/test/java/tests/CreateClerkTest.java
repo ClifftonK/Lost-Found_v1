@@ -1,17 +1,12 @@
 package tests;
 
 import generic.LoginGeneral;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import pages.CreateClerkElements;
-import pages.LoginElements;
 import utilities.CaptureScreenshot;
-import utilities.LaunchBrowser;
 
 /**
  * Created by clifftonkariuki on 8/5/17.
@@ -42,6 +37,11 @@ public class CreateClerkTest {
 
     @Test(priority = 1)
     public void createClerkTest() throws InterruptedException {
+        /*for this test to pass, make sure that the value in
+          the clerkid String above does not exist in the db since it is a primary key. Please log into the DB and
+          check that value, it is incremental so just check the last value in the Asc order and set the value
+          clerkid +1*/
+
         driver= LoginGeneral.callAdminLoginAction();
 
         Thread.sleep(2000);
