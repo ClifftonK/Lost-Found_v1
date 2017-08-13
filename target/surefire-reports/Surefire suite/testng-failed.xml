@@ -3,7 +3,17 @@
 <suite thread-count="1" verbose="0" name="Failed suite [Surefire suite]">
   <test name="Surefire test">
     <classes>
-      <class name="tests.LoginSmokeTest"/>
+      <class name="tests.ToogleMenuTest"/>
     </classes>
   </test> <!-- Surefire test -->
+  <test name="Surefire test(failed)">
+    <classes>
+      <class name="tests.ToogleMenuTest">
+        <methods>
+          <include name="afterTest"/>
+          <include name="testGoBackHome"/>
+        </methods>
+      </class> <!-- tests.ToogleMenuTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
