@@ -9,7 +9,7 @@ import utilities.LaunchBrowser;
 /**
  * Created by clifftonkariuki on 8/3/17.
  */
-public class LoginGeneral {
+public abstract class LoginGeneral {
 
     static WebDriver driver;
 

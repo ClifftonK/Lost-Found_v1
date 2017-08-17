@@ -15,8 +15,8 @@ public class CreateClerkTest {
 
     WebDriver driver;
 
-    static String clerkname= "Cliffton Kariuki Automation";
-    static String clerkid= "111";
+    static String clerkname= "Cliffton John Automation";
+    static String clerkid= "112";
     static String clerkidno= "90897867";
     static String clerkemail= clerkname+ "@huduma.com";
     static String clerkpassword= "changeme";
