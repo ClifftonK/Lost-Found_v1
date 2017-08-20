@@ -25,5 +25,10 @@ public class CreateClerkElements {
         driver.findElement(By.name("create_clerk")).click();
     }
 
-    public void editClerk(){}
+    public void editClerk(String newpassword, String confirmpass){
+
+        driver.findElement(By.name("newpassword")).sendKeys(newpassword);
+        driver.findElement(By.name("confirmpass")).sendKeys(confirmpass);
+        driver.findElement(By.name("submit")).click();
+    }
 }
