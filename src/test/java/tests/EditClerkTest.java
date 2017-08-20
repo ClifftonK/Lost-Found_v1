@@ -12,7 +12,7 @@ import utilities.CaptureScreenshot;
 /**
  * Created by clifftonkariuki on 8/20/17.
  */
-public class EditClerk extends LoginGeneral {
+public class EditClerkTest extends LoginGeneral {
 
     static WebDriver driver;
     static LoginGeneral callLoginGen;
@@ -21,12 +21,12 @@ public class EditClerk extends LoginGeneral {
     static String correctconfirmpass= "NewP@ssw0Rd";
     static String confirmpass= "C0nF1rmP@ss";
 
-    public EditClerk(WebDriver ldriver){this.driver= ldriver;}
+    public EditClerkTest(WebDriver ldriver){this.driver= ldriver;}
 
     public static void takeScreenshot(){
         CaptureScreenshot capture= new CaptureScreenshot();
         capture.captureScreenshot(driver);
-        System.out.println("Captured Successful clerk login screenshot\n");
+        System.out.println("Captured Successful password change screenshot\n");
     }
 
     @AfterTest

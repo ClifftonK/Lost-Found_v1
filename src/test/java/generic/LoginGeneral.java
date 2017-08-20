@@ -23,9 +23,9 @@ public abstract class LoginGeneral {
     static String clerk_email= "clif.kariuki@gmail.com";
     static String clerk_pass= "xx";
 
-    static String clerkname= "Edit Clerk Automation";
-    static String clerkid= "115";
-    static String clerkidno= "7890987";
+    static String clerkname= "Edit Automation";
+    static String clerkid= "117";
+    static String clerkidno= "23454334";
     static String clerkemail= clerkname+ "@huduma.com";
     static String clerkpassword= "changeme";
 
